@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use('/', express.static(__dirname + '/public'));
 
-var port = process.env.PORT || 8080; //sets port
+var port = process.env.PORT || 9876; //sets port
 
 //Routes for API
 var router = express.Router();
