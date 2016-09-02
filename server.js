@@ -13,6 +13,10 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use('/', express.static(__dirname + '/public'));
 
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname+ '/index.html'));
+});
+
 var port = process.env.PORT || 9876; //sets port
 
 //Routes for API
